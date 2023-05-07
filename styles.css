@@ -144,9 +144,7 @@ fieldset {
     .box-item-1:nth-child(odd){
       display: none;    
     }
-    .box-item-1:nth-child(even){
-        max-height:auto;
-    }
+
     .box-item-1{
         width:100%;
     }
