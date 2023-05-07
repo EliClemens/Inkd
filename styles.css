@@ -5,12 +5,12 @@ body {
 
 .nav {
     height: 50px;
-    background-color: rgba(255, 0, 0, 0.481);
+    background-color: #ec5c24;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 5px rgba(255, 0, 0, 0.771) solid;
-    flex-direction: row;
+    border: 5px black solid;
+    outline: 10px rgb(197, 16, 16) solid;    flex-direction: row;
 }
 
 .nav1 {
@@ -34,21 +34,23 @@ body {
 
 #logo-img {
     height: 200px;
-    border-left: 300px rgba(255, 0, 0, 0.481) solid;
-    border-right: 300px rgba(255, 0, 0, 0.481) solid;
+    border-left: 300px  #ec5c24 solid;
+    border-right: 300px  #ec5c24 solid;
 }
 
 .box-item-1 {
     /*index page with 2 pics and 2 paragraphs*/
-    width: 500px;
-    max-height: 525px;
-    background-color: rgba(255, 0, 0, 0.481);
-    border: 5px rgba(255, 0, 0, 0.771) solid;
+    width: auto;
+    max-height: auto;
+    background-color:  #ec5c24;
+    border: 5px  rgb(197, 16, 16) solid;
     align-items: center;
     padding: 10px;
     text-align: center;
 }
-
+.box-item-1:nth-child(even){
+    min-width: 250px;
+}
 .box-image {
     height: 525px;
     width: 400px;
@@ -70,7 +72,7 @@ body {
     /*images on index*/
     width: 200px;
     height: 300px;
-    border: 10px rgba(255, 0, 0, 0.771) dotted;
+    border: 10px rgb(197, 16, 16) dotted;
     padding: 10px;
     margin: 20px;
 }
@@ -80,28 +82,13 @@ body {
     width: 100%;
     height: 300px;
 }
-
-.reviews-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.review {
-    width: 200px;
-    border: 10px black solid;
-    background-color: rgba(255, 0, 0, 0.481);
-    outline: 10px rgba(255, 0, 0, 0.771) dotted;
-    padding: 10px;
-}
-
 .about {
     /*text for index about rebranding*/
     text-align: center;
     font-size: 18px;
-    background-color: rgba(255, 0, 0, 0.481);
+    background-color:  #ec5c24;
     border: 10px black solid;
-    outline: 10px solid rgba(255, 0, 0, 0.771);
+    outline: 10px rgb(197, 16, 16) solid;
     padding: 10px;
 
 }
@@ -113,5 +100,67 @@ body {
 }
 fieldset {
     display: inline-block;
-    border: 5px rgba(255, 0, 0, 0.771) dotted;
+    border: 5px rgba(255, 0, 0, 0.437) dotted;
+}
+
+/*services*/
+.card {
+    background-color: #ec5c24;
+    border-bottom:2.5px black solid;
+    border-top:2.5px black solid;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto; /* "auto" keeps it centered within its div parent*/
+    text-align: center;
+ 
+}
+.card h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.card p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0 0;
+}
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+@media (max-Width:1200px){
+    .box-item-1:nth-child(odd){
+        width:200px;    
+      }
+      .services-pic{
+        width:100px;
+      }
+
+}
+@media (max-width: 992px) {
+    .box-item-1:nth-child(odd){
+      display: none;    
+    }
+    .box-item-1:nth-child(even){
+        max-height:auto;
+    }
+    .box-item-1{
+        width:100%;
+    }
+    .images:nth-child(even){
+        display:none;
+    }
+    .nav1{
+        font-size: 18px;
+    }
+    .services-pic{
+        display:none;
+    }
+    .contact-form{
+        flex-direction: column;
+        align-items: center;
+    }
 }
