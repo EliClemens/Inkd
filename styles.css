@@ -10,7 +10,8 @@ body {
     justify-content: space-around;
     align-items: center;
     border: 5px black solid;
-    outline: 10px rgb(197, 16, 16) solid;    flex-direction: row;
+    outline: 10px rgb(197, 16, 16) solid;
+    flex-direction: row;
 }
 
 .nav1 {
@@ -34,24 +35,25 @@ body {
 
 #logo-img {
     height: 200px;
-    border-left: 300px  #ec5c24 solid;
-    border-right: 300px  #ec5c24 solid;
+    border-left: 300px #ec5c24 solid;
+    border-right: 300px #ec5c24 solid;
 }
 
 .box-item-1 {
     /*index page with 2 pics and 2 paragraphs*/
     width: auto;
-    max-height: auto;
-    background-color:  #ec5c24;
-    border: 5px  rgb(197, 16, 16) solid;
+    background-color: #ec5c24;
+    border: 5px rgb(197, 16, 16) solid;
     align-items: center;
     padding: 10px;
     text-align: center;
 }
-.box-item-1:nth-child(even){
-    min-width: 250px;
+
+.box-item-1:nth-child(even) {
+    min-width: 250px;/*shrinks text area*/
 }
-.box-image {
+
+.box-image { 
     height: 525px;
     width: 400px;
 }
@@ -82,11 +84,12 @@ body {
     width: 100%;
     height: 300px;
 }
+
 .about {
     /*text for index about rebranding*/
     text-align: center;
     font-size: 18px;
-    background-color:  #ec5c24;
+    background-color: #ec5c24;
     border: 10px black solid;
     outline: 10px rgb(197, 16, 16) solid;
     padding: 10px;
@@ -98,6 +101,7 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+
 fieldset {
     display: inline-block;
     border: 5px rgba(255, 0, 0, 0.437) dotted;
@@ -106,58 +110,73 @@ fieldset {
 /*services*/
 .card {
     background-color: #ec5c24;
-    border-bottom:2.5px black solid;
-    border-top:2.5px black solid;
+    border-bottom: 2.5px black solid;
+    border-top: 2.5px black solid;
     padding: 20px;
     width: 400px;
-    margin: 0 auto; /* "auto" keeps it centered within its div parent*/
+    margin: 0 auto;
+    /* "auto" keeps it centered within its div parent*/
     text-align: center;
- 
+
 }
-.card h1 {
+
+.card h1 {/*card on services*/
     font-size: 24px;
     margin: 0;
 }
-.card p {
+
+.card p {/*card on services*/
     font-size: 18px;
     line-height: 1.5;
     margin: 10px 0 0;
 }
-.button-link {
+
+.button-link {/*card on services*/
     display: inline-block;
     padding: 10px 20px;
     background-color: #008CBA;
     color: #fff;
     text-decoration: none;
-  }
-  
-@media (max-Width:1200px){
-    .box-item-1:nth-child(odd){
-        width:200px;    
-      }
-      .services-pic{
-        width:100px;
-      }
+}
+
+@media (max-Width:1200px) {
+    .box-item-1:nth-child(odd) {
+        width: 200px;/*shrinks image area*/
+    }
+
+    .services-pic {
+        width: 100px;/*shrinks image on service page*/
+    }
 
 }
+
 @media (max-width: 992px) {
-    .box-item-1:nth-child(odd){
-      display: none;    
+    .box-item-1:nth-child(odd) {
+        display: none;/*makes images disappear on index */
     }
 
-    .box-item-1{
-        width:100%;
+    .box-item-1 {
+        width: 100%;
     }
-    .images:nth-child(even){
-        display:none;
+
+    .images:nth-child(even) {
+        display: none;
     }
-    .nav1{
+
+    .nav1 {
         font-size: 18px;
     }
-    .services-pic{
-        display:none;
+
+    .services-pic {
+        display: none;
     }
-    .contact-form{
+
+    .contact-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-container {
         flex-direction: column;
         align-items: center;
     }
